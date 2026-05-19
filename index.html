@@ -3,74 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureApp - Welcome</title>
+    <title>Profile(Secured)</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
         <div class="form-container">
-            <!-- Header with logo/icon -->
-            <div class="welcome-header">
-                <div class="app-logo">
-                    <i class="fas fa-shield-alt"></i>
+            <div class="app-header">
+                <div class="company-logo">
+                    <i class="fas fa-building"></i>
                 </div>
-                <h1>SecureApp</h1>
-                <p>Your data is protected</p>
+                <h1>Profile</h1>
+                <p>Manage and access your profile</p>
             </div>
 
-            <!-- Main action button -->
-            <button onclick="window.location.href='login.html'" class="welcome-btn">
+            <button onclick="window.location.href='login.html'" class="login-button">
                 <div class="btn-content">
-                    <span>Enter Application</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <span>Access Your Account</span>
+                    <i class="fas fa-sign-in-alt"></i>
                 </div>
             </button>
 
-            <!-- Security status -->
-            <div class="security-status">
-                <div class="status-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>IDOR Protection: Active</span>
+            <div class="platform-features">
+                <div class="feature-card">
+                    <i class="fas fa-user-edit"></i>
+                    <h3>Profile Management</h3>
+                    <p>Update your personal information and contact details</p>
                 </div>
-                <div class="status-item">
-                    <i class="fas fa-user-shield"></i>
-                    <span>Authorization: Enabled</span>
+                
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Activity Dashboard</h3>
+                    <p>Track your orders and account activity</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Payment Center</h3>
+                    <p>Manage payment methods and billing information</p>
                 </div>
             </div>
 
-            <!-- Demo info -->
-            <div class="demo-info">
-                <h3>Demo Trial Accounts</h3>
-                <div class="credentials">
-                    <div class="credential-row">
-                        <i class="fas fa-user-circle"></i>
-                        <div>
-                            <p><strong>Chris:</strong> chris123@email.com</p>
-                            <p><strong>Password:</strong> 123456</p>
+            <!-- User Accounts Section -->
+            <div class="accounts-section">
+                <h3>Customer Accounts</h3>
+                <p>Access your personalized dashboard with your registered email</p>
+                
+                <div class="sample-accounts">
+                    <!-- All 6 accounts -->
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>Adhamkh</strong>
+                            <span>Adham@email.com</span>
                         </div>
                     </div>
                     
-                    <div class="credential-row">
-                        <i class="fas fa-user-circle"></i>
-                        <div>
-                            <p><strong>Hops:</strong> hops123@email.com</p>
-                            <p><strong>Password:</strong> 123456</p>
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>MrAfton</strong>
+                            <span>Afton123@email.com</span>
                         </div>
                     </div>
                     
-                    <div class="credential-row">
-                        <i class="fas fa-user-circle"></i>
-                        <div>
-                            <p><strong>Diana:</strong> diana123@email.com</p>
-                            <p><strong>Password:</strong> 123456</p>
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>chrissantino</strong>
+                            <span>chris123@email.com</span>
+                        </div>
+                    </div>
+
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>Abdelrahman atef</strong>
+                            <span>abdelrahman123@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>reda ayman</strong>
+                            <span>reda123@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="account-card">
+                        <i class="fas fa-user"></i>
+                        <div class="account-details">
+                            <strong>Aly Hassan</strong>
+                            <span>aly123@gmail.com</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="trial-note">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Try logging in with different accounts and test the security</span>
+                <div class="password-note">
+                    <i class="fas fa-key"></i>
+                    <span>Default password for all accounts: <strong>123456</strong></span>
+                </div>
+            </div>
+
+            <!-- Company Info -->
+            <div class="company-info">
+                <div class="info-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Enterprise Security</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-globe"></i>
+                    <span>Global Access</span>
                 </div>
             </div>
         </div>
