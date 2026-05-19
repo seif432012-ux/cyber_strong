@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile(secured)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Security Alert (shown when IDOR attack is blocked) -->
+            <div id="security-alert" class="security-alert" style="display: none;">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong>🔒 UNAUTHORIZED ACCESS BLOCKED</strong>
+                    <p>IDOR attack detected and prevented</p>
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="profile-header">
+                <div>
+                    <h1 id="user-name">Loading...</h1>
+                    <p id="user-subtitle">Premium Member</p>
+                </div>
+                <button onclick="logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="info-section">
+                <h2><i class="fas fa-user-circle"></i> Account Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-id-card"></i>
+                        <div>
+                            <small>Customer ID</small>
+                            <span id="user-id">—</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <small>Email</small>
+                            <span id="user-email">—</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <small>Phone</small>
+                            <span id="user-phone">—</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <small>Address</small>
+                            <span id="user-address">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order History -->
+            <div class="info-section">
+                <h2><i class="fas fa-shopping-cart"></i> Recent Orders</h2>
+                <div id="orders-container">
+                    <p>Loading orders...</p>
+                </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="info-section">
+                <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                <div class="payment-card">
+                    <i class="fas fa-credit-card payment-icon"></i>
+                    <div>
+                        <strong id="card-info">—</strong>
+                        <p class="card-subtitle">Default payment method</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Log -->
+            <div class="info-section">
+                <h2><i class="fas fa-shield-alt"></i> Security Activity</h2>
+                <div id="security-log">
+                    <!-- Security logs will appear here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="profile-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login(secured)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome Back</h1>
+            <p>Sign in to access your account</p>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                </div>
+
+                <button type="submit">
+                    <div class="btn-content">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </button>
+
+                <p id="error-message" class="error-message" style="display:none;"></p>
+            </form>
+
+            <!-- Security Enhancement Indicator -->
+            <div class="security-notice">
+                <i class="fas fa-shield-alt"></i>
+                <span>Enhanced Security: Access control enabled</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>
