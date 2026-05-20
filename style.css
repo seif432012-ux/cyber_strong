@@ -50,9 +50,6 @@ p{
     color: var(--text-gray);
 }
 
-/* ================================================= */
-/*          LOGIN PAGE STYLES (FIXED)                */
-/* ================================================= */
 
 .input-group{
     display: grid;
@@ -119,10 +116,6 @@ input::placeholder{
     font-size: 0.9rem;
 }
 
-
-/* ================================================= */
-/*        INDEX & SHARED COMPONENT STYLES            */
-/* ================================================= */
 
 .app-header {
     text-align: center;
@@ -287,10 +280,6 @@ button:hover, .login-button:hover {
 }
 
 
-/* ================================================= */
-/*             PROFILE PAGE STYLES                   */
-/* ================================================= */
-
 .profile-header {
     display: flex;
     justify-content: space-between;
@@ -304,7 +293,7 @@ button:hover, .login-button:hover {
     background: #6b7280;
     width: auto;
     padding: 10px 20px;
-    margin: 0; /* Reset margin for this specific button */
+    margin: 0; 
 }
 
 .logout-btn:hover {
@@ -402,9 +391,7 @@ button:hover, .login-button:hover {
     color: var(--primary-color);
 }
 
-/* ================================================= */
-/*       SECURE ALERT & LOG (for profile page)       */
-/* ================================================= */
+
 
 .security-alert {
     background: linear-gradient(135deg, #ef4444, #b91c1c);
@@ -465,9 +452,6 @@ button:hover, .login-button:hover {
 }
 
 
-/* ================================================= */
-/*                   ANIMATION                       */
-/* ================================================= */
 
 @keyframes fadeInUp{
     from{
@@ -487,9 +471,7 @@ button:hover, .login-button:hover {
 }
 
 
-/* ================================================= */
-/*                   RESPONSIVE                      */
-/* ================================================= */
+
 
 @media (max-width:600px){
     .form-container{

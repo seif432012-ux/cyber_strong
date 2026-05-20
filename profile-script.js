@@ -1,4 +1,3 @@
-// User Database (same as vulnerable version)
 const USERS_DATABASE = {104: {
         id: 104,
         name: 'Adhamkh',
@@ -83,13 +82,11 @@ const USERS_DATABASE = {104: {
     
 };
 
-// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
     initializeProfile();
 });
 
 function initializeProfile() {
-    // Check if user is logged in
     const loggedInUserId = localStorage.getItem('loggedUserId');
     
     if (!loggedInUserId) {
@@ -98,7 +95,6 @@ function initializeProfile() {
         return;
     }
     
-    // Get requested user ID from URL
     const urlParams = new URLSearchParams(window.location.search);
     const requestedUserId = urlParams.get('user_id');
     
@@ -107,7 +103,6 @@ function initializeProfile() {
         return;
     }
     
-    // 🛡️ IDOR FIX: Check if user can access this profile
     if (requestedUserId !== loggedInUserId) {
         showSecurityAlert(loggedInUserId, requestedUserId);
         
@@ -118,13 +113,10 @@ function initializeProfile() {
         return;
     }
     
-    // Load user profile (authorized access)
     loadUserProfile(requestedUserId);
 }
 
-// 🚨 Show security alert when IDOR attack is blocked
 function showSecurityAlert(loggedUserId, attemptedUserId) {
-    // Create alert banner
     const alertBanner = document.createElement('div');
     alertBanner.style.cssText = `
         background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
@@ -140,21 +132,19 @@ function showSecurityAlert(loggedUserId, attemptedUserId) {
         <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
             <i class="fas fa-shield-alt" style="font-size: 2rem;"></i>
             <div>
-                <strong style="font-size: 1.2rem;">🚨 UNAUTHORIZED ACCESS BLOCKED</strong>
+                <strong style="font-size: 1.2rem;"> UNAUTHORIZED ACCESS BLOCKED </strong>
                 <p style="margin: 5px 0 0 0;">You tried to access user ${attemptedUserId} but you're logged in as user ${loggedUserId}</p>
                 <p style="margin: 5px 0 0 0;">Redirecting to your profile in 3 seconds...</p>
             </div>
         </div>
     `;
     
-    // Insert at top of page
     const container = document.querySelector('.form-container');
     container.insertBefore(alertBanner, container.firstChild);
     
-    console.log(`🚨 IDOR ATTACK BLOCKED: User ${loggedUserId} tried to access User ${attemptedUserId}`);
+    console.log(` IDOR ATTACK BLOCKED: User ${loggedUserId} tried to access User ${attemptedUserId}`);
 }
 
-// Same loadUserProfile function as vulnerable version
 function loadUserProfile(userId) {
     const user = USERS_DATABASE[userId];
     
@@ -163,7 +153,6 @@ function loadUserProfile(userId) {
         return;
     }
     
-    // Display user information
     document.getElementById('user-name').textContent = user.name;
     document.getElementById('user-id').textContent = '#' + user.id;
     document.getElementById('user-email').textContent = user.email;
@@ -171,7 +160,6 @@ function loadUserProfile(userId) {
     document.getElementById('user-address').textContent = user.address;
     document.getElementById('card-info').textContent = user.card;
     
-    // Display orders
     const ordersContainer = document.getElementById('orders-container');
     ordersContainer.innerHTML = '';
     
@@ -196,7 +184,7 @@ function loadUserProfile(userId) {
         ordersContainer.innerHTML += orderHTML;
     });
     
-    console.log('✅ Authorized access granted to user:', user.name);
+    console.log(' Authorized access granted to user:', user.name);
 }
 
 function logout() {
